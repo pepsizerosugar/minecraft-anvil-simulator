@@ -7,26 +7,39 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- 헤더 -->
   <header>
     <h1>🛠️ 마인크래프트 모루 인챈트 시뮬레이터</h1>
-    <p>원하는 인챈트를 선택하며 <b>최적의 인챈트 순서</b>를 찾아보세요.</p>
   </header>
+
+  <!-- 메인 콘텐츠 -->
   <main>
-    <!-- 1) 카테고리 선택 (버튼 그룹) -->
+    <!-- 1. 카테고리 선택 -->
     <section id="category-selector">
       <h2>1️⃣ 카테고리 선택</h2>
       <div id="category-buttons" class="button-group">
-        <button data-cat="weapon" class="cat-btn">무기</button>
-        <button data-cat="tool"   class="cat-btn">도구</button>
-        <button data-cat="armor"  class="cat-btn">방어구</button>
+        <button data-cat="weapon" class="cat-btn">
+          <img src="resources/images/sword.gif" alt="무기" />
+          <span>무기</span>
+        </button>
+        <button data-cat="tool" class="cat-btn">
+          <img src="resources/images/pickaxe.gif" alt="도구" />
+          <span>도구</span>
+        </button>
+        <button data-cat="armor" class="cat-btn">
+          <img src="resources/images/helmet.gif" alt="방어구" />
+          <span>방어구</span>
+        </button>
       </div>
     </section>
-    <!-- 2) 아이템 슬롯 선택 (버튼 그룹) -->
+
+    <!-- 2. 아이템 선택 -->
     <section id="item-selector">
       <h2>2️⃣ 아이템 선택</h2>
       <div id="item-buttons" class="button-group"></div>
     </section>
-    <!-- 3) 인챈트 테이블 -->
+
+    <!-- 3. 인챈트 테이블 -->
     <section id="enchantments">
       <h2>3️⃣ 인챈트 레벨 및 설명</h2>
       <table id="enchant-table">
@@ -40,17 +53,30 @@
         <tbody></tbody>
       </table>
     </section>
-    <!-- 4) 결과 표시 -->
+
+    <!-- 4. 결과 표시 -->
     <section id="results">
       <h2>4️⃣ 최적 조합 플로우</h2>
-      <p>필요 레벨: <span id="total-cost">–</span> 레벨</p>
+      <div class="level-display">
+        <div class="level-icon">✨</div>
+        <div class="level-info">
+          <span class="level-label">필요 레벨</span>
+          <span id="total-cost" class="level-value">–</span>
+        </div>
+      </div>
       <div id="detail-seq"></div>
     </section>
   </main>
+
+  <!-- 푸터 -->
   <footer>
     <p>© 2025 pepsizerosugar</p>
   </footer>
+
+  <!-- 토스트 메시지 컨테이너 -->
   <div id="toast-container"></div>
+
+  <!-- 스크립트 -->
   <script src="main.js"></script>
 </body>
 </html>

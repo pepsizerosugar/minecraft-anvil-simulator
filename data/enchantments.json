@@ -1295,5 +1295,109 @@
     "item_multiplier": 4,
     "exclusive_with": [],
     "weight": 2
+  },
+  {
+    "id": "density",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": null
+    },
+    "name": {
+      "en": "Density",
+      "ko": "육중"
+    },
+    "description": {
+      "en": "Increases damage based on fall distance",
+      "ko": "낙하 거리당 추가 피해"
+    },
+    "max_level": 5,
+    "rarity": 5,
+    "applicable_slots": [
+      "mace"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": false
+    },
+    "enchanting_table_max_level": 5,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [
+      "breach",
+      "smite",
+      "bane_of_arthropods"
+    ],
+    "weight": 5
+  },
+  {
+    "id": "breach",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": null
+    },
+    "name": {
+      "en": "Breach",
+      "ko": "격파"
+    },
+    "description": {
+      "en": "Reduces target's armor effectiveness",
+      "ko": "대상의 방어력 감소"
+    },
+    "max_level": 4,
+    "rarity": 2,
+    "applicable_slots": [
+      "mace"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": false
+    },
+    "enchanting_table_max_level": 4,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "density",
+      "smite",
+      "bane_of_arthropods"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "wind_burst",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": null
+    },
+    "name": {
+      "en": "Wind Burst",
+      "ko": "돌풍"
+    },
+    "description": {
+      "en": "Launches the wielder upward",
+      "ko": "시전자를 위로 밀쳐냄"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "mace"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [],
+    "weight": 2
   }
 ]

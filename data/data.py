@@ -42,7 +42,7 @@ ENCHANT_MULTIPLIERS = {
     "sweeping_edge":         {"item": 4, "book": 2}
 }
 
-with open("data/enchantments.json", "r", encoding="utf-8") as f:
+with open("enchantments.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 for ench in data:
