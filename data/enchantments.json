@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "aqua_affinity",
+    "ids": {
+      "java": {
+        "pre113": 6,
+        "post113": 8
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Aqua Affinity",
+      "ko": "친수성"
+    },
+    "description": {
+      "en": "Increases mining speed underwater",
+      "ko": "수중 채굴 속도 향상"
+    },
+    "max_level": 1,
+    "rarity": 2,
+    "applicable_slots": [
+      "helmet"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 30,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "bane_of_arthropods",
+    "ids": {
+      "java": {
+        "pre113": 18,
+        "post113": 11
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Bane of Arthropods",
+      "ko": "살충"
+    },
+    "description": {
+      "en": "Increases damage to arthropod mobs",
+      "ko": "절지동물에게 피해 증가"
+    },
+    "max_level": 5,
+    "rarity": 5,
+    "applicable_slots": [
+      "sword",
+      "axe"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 30,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [
+      "sharpness",
+      "smite"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "blast_protection",
+    "ids": {
+      "java": {
+        "pre113": 3,
+        "post113": 3
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Blast Protection",
+      "ko": "폭발로부터 보호"
+    },
+    "description": {
+      "en": "Reduces explosion damage",
+      "ko": "폭발 피해 감소"
+    },
+    "max_level": 4,
+    "rarity": 2,
+    "applicable_slots": [
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 30,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "protection",
+      "fire_protection",
+      "projectile_protection"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "channeling",
+    "ids": {
+      "java": {
+        "pre113": 68,
+        "post113": 32
+      },
+      "bedrock": 1
+    },
+    "name": {
+      "en": "Channeling",
+      "ko": "집전"
+    },
+    "description": {
+      "en": "Summons lightning when hitting with a trident during thunderstorms",
+      "ko": "뇌우 중 삼지창 타격 시 번개 소환"
+    },
+    "max_level": 1,
+    "rarity": 1,
+    "applicable_slots": [
+      "trident"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 30,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [
+      "riptide"
+    ],
+    "weight": 4
+  },
+  {
+    "id": "binding_curse",
+    "ids": {
+      "java": {
+        "pre113": 10,
+        "post113": 27
+      },
+      "bedrock": 1
+    },
+    "name": {
+      "en": "Curse of Binding",
+      "ko": "귀속 저주"
+    },
+    "description": {
+      "en": "Prevents item removal once equipped",
+      "ko": "아이템 제거 방지"
+    },
+    "max_level": 1,
+    "rarity": 1,
+    "applicable_slots": [
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [],
+    "weight": 4
+  },
+  {
+    "id": "vanishing_curse",
+    "ids": {
+      "java": {
+        "pre113": 71,
+        "post113": 28
+      },
+      "bedrock": 1
+    },
+    "name": {
+      "en": "Curse of Vanishing",
+      "ko": "소실 저주"
+    },
+    "description": {
+      "en": "Item disappears on death",
+      "ko": "죽으면 아이템이 사라짐"
+    },
+    "max_level": 1,
+    "rarity": 1,
+    "applicable_slots": [
+      "any"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [],
+    "weight": 4
+  },
+  {
+    "id": "depth_strider",
+    "ids": {
+      "java": {
+        "pre113": 8,
+        "post113": 7
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Depth Strider",
+      "ko": "물갈퀴"
+    },
+    "description": {
+      "en": "Increases underwater movement speed",
+      "ko": "수중 이동속도 증가"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 30,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "frost_walker"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "efficiency",
+    "ids": {
+      "java": {
+        "pre113": 32,
+        "post113": 15
+      },
+      "bedrock": 10
+    },
+    "name": {
+      "en": "Efficiency",
+      "ko": "효율"
+    },
+    "description": {
+      "en": "Increases mining speed",
+      "ko": "채굴 속도 증가"
+    },
+    "max_level": 5,
+    "rarity": 10,
+    "applicable_slots": [
+      "pickaxe",
+      "axe",
+      "shovel",
+      "hoe"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 30,
+    "book_multiplier": 1,
+    "item_multiplier": 1,
+    "exclusive_with": [],
+    "weight": 1
+  },
+  {
+    "id": "feather_falling",
+    "ids": {
+      "java": {
+        "pre113": 2,
+        "post113": 2
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Feather Falling",
+      "ko": "가벼운 착지"
+    },
+    "description": {
+      "en": "Reduces fall damage",
+      "ko": "낙하 피해 감소"
+    },
+    "max_level": 4,
+    "rarity": 5,
+    "applicable_slots": [
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 4,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [],
+    "weight": 1
+  },
+  {
+    "id": "fire_aspect",
+    "ids": {
+      "java": {
+        "pre113": 20,
+        "post113": 13
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Fire Aspect",
+      "ko": "발화"
+    },
+    "description": {
+      "en": "Sets target on fire",
+      "ko": "피격 대상에 불이 붙음"
+    },
+    "max_level": 2,
+    "rarity": 2,
+    "applicable_slots": [
+      "sword"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 2,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "fire_protection",
+    "ids": {
+      "java": {
+        "pre113": 1,
+        "post113": 1
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Fire Protection",
+      "ko": "화염으로부터 보호"
+    },
+    "description": {
+      "en": "Reduces fire damage",
+      "ko": "화염 피해 감소"
+    },
+    "max_level": 4,
+    "rarity": 5,
+    "applicable_slots": [
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 4,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [
+      "protection",
+      "blast_protection",
+      "projectile_protection"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "flame",
+    "ids": {
+      "java": {
+        "pre113": 50,
+        "post113": 21
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Flame",
+      "ko": "화염"
+    },
+    "description": {
+      "en": "Sets arrows on fire",
+      "ko": "화살에 피격된 대상에 발화"
+    },
+    "max_level": 1,
+    "rarity": 2,
+    "applicable_slots": [
+      "bow"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 1,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "infinity"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "fortune",
+    "ids": {
+      "java": {
+        "pre113": 35,
+        "post113": 18
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Fortune",
+      "ko": "행운"
+    },
+    "description": {
+      "en": "Increases block drops",
+      "ko": "블록의 드롭량 증가"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "pickaxe",
+      "axe",
+      "shovel",
+      "hoe"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "silk_touch"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "frost_walker",
+    "ids": {
+      "java": {
+        "pre113": 9,
+        "post113": 25
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Frost Walker",
+      "ko": "차가운 걸음"
+    },
+    "description": {
+      "en": "Freezes water into ice when walking",
+      "ko": "물이 얼음 블록으로 변함"
+    },
+    "max_level": 2,
+    "rarity": 2,
+    "applicable_slots": [
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "depth_strider"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "impaling",
+    "ids": {
+      "java": {
+        "pre113": 66,
+        "post113": 29
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Impaling",
+      "ko": "찌르기"
+    },
+    "description": {
+      "en": "Increases damage to marine mobs",
+      "ko": "수중에서 스폰된 개체에 삼지창 피해 추가"
+    },
+    "max_level": 5,
+    "rarity": 2,
+    "applicable_slots": [
+      "trident"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 5,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "infinity",
+    "ids": {
+      "java": {
+        "pre113": 51,
+        "post113": 22
+      },
+      "bedrock": 1
+    },
+    "name": {
+      "en": "Infinity",
+      "ko": "무한"
+    },
+    "description": {
+      "en": "Prevents arrow consumption",
+      "ko": "일반 화살을 활로 쏠 때 화살 소비가 없음"
+    },
+    "max_level": 1,
+    "rarity": 1,
+    "applicable_slots": [
+      "bow"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 1,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [
+      "mending",
+      "flame"
+    ],
+    "weight": 4
+  },
+  {
+    "id": "knockback",
+    "ids": {
+      "java": {
+        "pre113": 19,
+        "post113": 12
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Knockback",
+      "ko": "밀치기"
+    },
+    "description": {
+      "en": "Increases knockback dealt",
+      "ko": "피격된 대상의 밀치기 효과 증가"
+    },
+    "max_level": 2,
+    "rarity": 5,
+    "applicable_slots": [
+      "sword"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 2,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [],
+    "weight": 1
+  },
+  {
+    "id": "looting",
+    "ids": {
+      "java": {
+        "pre113": 21,
+        "post113": 14
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Looting",
+      "ko": "약탈"
+    },
+    "description": {
+      "en": "Increases mob drop rate",
+      "ko": "몬스터 드롭량 증가"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "sword"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "loyalty",
+    "ids": {
+      "java": {
+        "pre113": 65,
+        "post113": 31
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Loyalty",
+      "ko": "충절"
+    },
+    "description": {
+      "en": "Thrown trident returns to you",
+      "ko": "던진 삼지창이 돌아옴"
+    },
+    "max_level": 3,
+    "rarity": 5,
+    "applicable_slots": [
+      "trident"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 1,
+    "item_multiplier": 1,
+    "exclusive_with": [
+      "riptide"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "luck_of_the_sea",
+    "ids": {
+      "java": {
+        "pre113": 61,
+        "post113": 23
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Luck of the Sea",
+      "ko": "바다의 행운"
+    },
+    "description": {
+      "en": "Increases chance of treasure when fishing",
+      "ko": "낚시에서 희귀 아이템 획득률 상승"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "fishing_rod"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "lure",
+    "ids": {
+      "java": {
+        "pre113": 62,
+        "post113": 24
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Lure",
+      "ko": "미끼"
+    },
+    "description": {
+      "en": "Decreases time to catch fish",
+      "ko": "낚시 걸리는 시간 감소"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "fishing_rod"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "mending",
+    "ids": {
+      "java": {
+        "pre113": 70,
+        "post113": 26
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Mending",
+      "ko": "수선"
+    },
+    "description": {
+      "en": "Repairs item using experience orbs",
+      "ko": "경험치로 도구 수선"
+    },
+    "max_level": 1,
+    "rarity": 2,
+    "applicable_slots": [
+      "any"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "infinity"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "multishot",
+    "ids": {
+      "java": {
+        "pre113": 1,
+        "post113": null
+      },
+      "bedrock": 33
+    },
+    "name": {
+      "en": "Multishot",
+      "ko": "다중 발사"
+    },
+    "description": {
+      "en": "Fires three projectiles at once",
+      "ko": "한 번에 3개의 화살을 발사"
+    },
+    "max_level": 1,
+    "rarity": 2,
+    "applicable_slots": [
+      "crossbow"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 1,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "piercing"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "piercing",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": 34
+    },
+    "name": {
+      "en": "Piercing",
+      "ko": "관통"
+    },
+    "description": {
+      "en": "Arrows pass through multiple entities",
+      "ko": "화살이 여러 개체를 관통"
+    },
+    "max_level": 4,
+    "rarity": 10,
+    "applicable_slots": [
+      "crossbow"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 4,
+    "book_multiplier": 1,
+    "item_multiplier": 1,
+    "exclusive_with": [
+      "multishot"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "projectile_protection",
+    "ids": {
+      "java": {
+        "pre113": 4,
+        "post113": 4
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Projectile Protection",
+      "ko": "발사체로부터 보호"
+    },
+    "description": {
+      "en": "Reduces ranged damage",
+      "ko": "원거리 공격의 피해 감소"
+    },
+    "max_level": 4,
+    "rarity": 5,
+    "applicable_slots": [
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 4,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [
+      "protection",
+      "blast_protection",
+      "fire_protection"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "protection",
+    "ids": {
+      "java": {
+        "pre113": 0,
+        "post113": 0
+      },
+      "bedrock": 10
+    },
+    "name": {
+      "en": "Protection",
+      "ko": "보호"
+    },
+    "description": {
+      "en": "Reduces all damage except void and hunger",
+      "ko": "대부분의 피해 감소"
+    },
+    "max_level": 4,
+    "rarity": 10,
+    "applicable_slots": [
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 4,
+    "book_multiplier": 1,
+    "item_multiplier": 1,
+    "exclusive_with": [
+      "blast_protection",
+      "fire_protection",
+      "projectile_protection"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "punch",
+    "ids": {
+      "java": {
+        "pre113": 49,
+        "post113": 20
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Punch",
+      "ko": "밀어내기"
+    },
+    "description": {
+      "en": "Increases knockback of arrows",
+      "ko": "화살 피격대상 밀어내기 증가"
+    },
+    "max_level": 2,
+    "rarity": 2,
+    "applicable_slots": [
+      "bow"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 2,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "quick_charge",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": 35
+    },
+    "name": {
+      "en": "Quick Charge",
+      "ko": "빠른 장전"
+    },
+    "description": {
+      "en": "Decreases crossbow reload time",
+      "ko": "쇠뇌의 재장전 시간을 줄임"
+    },
+    "max_level": 3,
+    "rarity": 5,
+    "applicable_slots": [
+      "crossbow"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [],
+    "weight": 1
+  },
+  {
+    "id": "respiration",
+    "ids": {
+      "java": {
+        "pre113": 5,
+        "post113": 6
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Respiration",
+      "ko": "호흡"
+    },
+    "description": {
+      "en": "Extends underwater breathing time",
+      "ko": "수중 호흡 시간 증가"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "helmet"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  },
+  {
+    "id": "riptide",
+    "ids": {
+      "java": {
+        "pre113": 67,
+        "post113": 30
+      },
+      "bedrock": 2
+    },
+    "name": {
+      "en": "Riptide",
+      "ko": "급류"
+    },
+    "description": {
+      "en": "Propels player when throwing trident in water or rain",
+      "ko": "삼지창을 던지면 플레이어가 질주함. 물속이나 빗속에서만 가능"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "trident"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [
+      "channeling",
+      "loyalty"
+    ],
+    "weight": 2
+  },
+  {
+    "id": "sharpness",
+    "ids": {
+      "java": {
+        "pre113": 16,
+        "post113": 9
+      },
+      "bedrock": 10
+    },
+    "name": {
+      "en": "Sharpness",
+      "ko": "날카로움"
+    },
+    "description": {
+      "en": "Increases melee damage",
+      "ko": "피해 증가"
+    },
+    "max_level": 5,
+    "rarity": 10,
+    "applicable_slots": [
+      "sword",
+      "axe"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 5,
+    "book_multiplier": 1,
+    "item_multiplier": 1,
+    "exclusive_with": [
+      "smite",
+      "bane_of_arthropods"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "silk_touch",
+    "ids": {
+      "java": {
+        "pre113": 33,
+        "post113": 16
+      },
+      "bedrock": 1
+    },
+    "name": {
+      "en": "Silk Touch",
+      "ko": "섬세한 손길"
+    },
+    "description": {
+      "en": "Mined blocks drop themselves",
+      "ko": "채굴한 블록이 그대로 드롭됨"
+    },
+    "max_level": 1,
+    "rarity": 1,
+    "applicable_slots": [
+      "pickaxe",
+      "axe",
+      "shovel",
+      "hoe"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 1,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [
+      "fortune"
+    ],
+    "weight": 4
+  },
+  {
+    "id": "smite",
+    "ids": {
+      "java": {
+        "pre113": 17,
+        "post113": 10
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Smite",
+      "ko": "강타"
+    },
+    "description": {
+      "en": "Increases damage to undead mobs",
+      "ko": "언데드 몹에서 피해 증가"
+    },
+    "max_level": 5,
+    "rarity": 5,
+    "applicable_slots": [
+      "sword",
+      "axe"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 5,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [
+      "sharpness",
+      "bane_of_arthropods"
+    ],
+    "weight": 1
+  },
+  {
+    "id": "soul_speed",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": 36
+    },
+    "name": {
+      "en": "Soul Speed",
+      "ko": "영혼 가속"
+    },
+    "description": {
+      "en": "Increases speed on soul sand and soul soil",
+      "ko": "영혼 흙/모래 위에서 속도 증가"
+    },
+    "max_level": 3,
+    "rarity": 1,
+    "applicable_slots": [
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [],
+    "weight": 4
+  },
+  {
+    "id": "swift_sneak",
+    "ids": {
+      "java": {
+        "pre113": null,
+        "post113": null
+      },
+      "bedrock": 37
+    },
+    "name": {
+      "en": "Swift Sneak",
+      "ko": "신속한 잠행"
+    },
+    "description": {
+      "en": "Reduces sneak speed penalty",
+      "ko": "웅크릴 때 속도 감소 완화"
+    },
+    "max_level": 3,
+    "rarity": 1,
+    "applicable_slots": [
+      "leggings"
+    ],
+    "sources": {
+      "enchanting_table": false,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 0,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [],
+    "weight": 4
+  },
+  {
+    "id": "thorns",
+    "ids": {
+      "java": {
+        "pre113": 7,
+        "post113": 5
+      },
+      "bedrock": 1
+    },
+    "name": {
+      "en": "Thorns",
+      "ko": "가시"
+    },
+    "description": {
+      "en": "Damages attackers",
+      "ko": "공격자에게 피해를 입힘"
+    },
+    "max_level": 3,
+    "rarity": 1,
+    "applicable_slots": [
+      "helmet",
+      "chestplate",
+      "leggings",
+      "boots"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 4,
+    "item_multiplier": 8,
+    "exclusive_with": [],
+    "weight": 4
+  },
+  {
+    "id": "unbreaking",
+    "ids": {
+      "java": {
+        "pre113": 34,
+        "post113": 17
+      },
+      "bedrock": 5
+    },
+    "name": {
+      "en": "Unbreaking",
+      "ko": "내구성"
+    },
+    "description": {
+      "en": "Reduces durability loss chance",
+      "ko": "내구도 감소 확률 감소"
+    },
+    "max_level": 3,
+    "rarity": 5,
+    "applicable_slots": [
+      "all"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 1,
+    "item_multiplier": 2,
+    "exclusive_with": [],
+    "weight": 1
+  },
+  {
+    "id": "sweeping_edge",
+    "ids": {
+      "java": {
+        "pre113": 22,
+        "post113": null
+      },
+      "bedrock": null
+    },
+    "name": {
+      "en": "Sweeping Edge",
+      "ko": "휩쓸기"
+    },
+    "description": {
+      "en": "Increases sweep attack damage",
+      "ko": "스윕 공격 피해 증가"
+    },
+    "max_level": 3,
+    "rarity": 2,
+    "applicable_slots": [
+      "sword"
+    ],
+    "sources": {
+      "enchanting_table": true,
+      "anvil": true
+    },
+    "enchanting_table_max_level": 3,
+    "book_multiplier": 2,
+    "item_multiplier": 4,
+    "exclusive_with": [],
+    "weight": 2
+  }
+]
