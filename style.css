@@ -8,6 +8,12 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.3);
+  --min-width: 320px;
+  --max-width: 1200px;
+  --header-height: 50px;
+  --footer-height: 30px;
+  --section-padding: 10px;
+  --border-color: #dcdde1;
 }
 
 body {
@@ -157,15 +163,18 @@ section h2::after {
 }
 
 .level-button {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  color: #FFD700;
   padding: 4px 8px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  background: white;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-  margin: 0 2px;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.level-button:active {
+  background-color: #f0f0f0;
 }
 
 /* 레벨 1: 초록색 */
@@ -547,6 +556,9 @@ section h2::after {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  pointer-events: none;
+  width: 100%;
+  max-width: 400px;
 }
 
 .toast {
@@ -559,6 +571,10 @@ section h2::after {
   transform: translateY(20px);
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  white-space: normal;
+  word-break: keep-all;
+  line-height: 1.4;
 }
 
 .toast.show {
@@ -575,25 +591,215 @@ footer {
 
 @media (max-width: 768px) {
   main {
-    padding: 1rem;
+    padding: 5px;
   }
-  
-  .button-group {
-    flex-direction: column;
+
+  section {
+    margin: 5px 0;
+    padding: 8px;
   }
-  
+
+  section h2 {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  /* 카테고리 버튼 3열 배치 */
+  #category-buttons.button-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    padding: 3px;
+  }
+
+  /* 아이템 버튼 4열 배치 */
+  #item-buttons.button-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    padding: 3px;
+  }
+
   .cat-btn, .item-btn {
-    width: 100%;
+    padding: 3px;
+    min-width: 0;
   }
-  
+
+  .cat-btn img, .item-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cat-btn span, .item-btn span {
+    font-size: 11px;
+  }
+
+  /* 인챈트 테이블 모바일 최적화 */
+  #enchant-table {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  #enchant-table th:nth-child(2),
+  #enchant-table td:nth-child(2) {
+    display: none;
+  }
+
+  #enchant-table th,
+  #enchant-table td {
+    padding: 4px;
+  }
+
+  #enchant-table td:first-child {
+    position: relative;
+    padding-right: 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+  }
+
+  #enchant-table td:first-child:active {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* 플로우 스텝 모바일 최적화 */
   .merge-step {
-    flex-wrap: wrap;
+    padding: 5px;
+    margin: 3px 0;
   }
-  
+
+  .merge-header {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .merge-step-number {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    margin-right: 3px;
+  }
+
+  .merge-group {
+    margin: 2px 0;
+  }
+
+  .merge-type {
+    gap: 3px;
+  }
+
+  .merge-type img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .merge-arrow {
+    margin: 3px 0;
+  }
+
+  .merge-arrow .plus,
+  .merge-arrow .arrow {
+    font-size: 14px;
+  }
+
+  .merge-plus, .merge-equal {
+    padding: 2px 6px;
+    font-size: 11px;
+  }
+
   .enchant-level {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  .enchant-info {
+    font-size: 11px;
+  }
+
+  .enchant-tooltip {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .level-display {
+    padding: 5px;
+  }
+
+  .level-icon {
+    font-size: 16px;
+  }
+
+  .level-info {
+    font-size: 11px;
+  }
+
+  header h1 {
+    padding: 8px;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+
+  #item-buttons:empty::after {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  #toast-container {
+    bottom: 16px;
+    gap: 8px;
+    max-width: 90%;
+  }
+
+  .toast {
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  .cat-btn span, .item-btn span {
+    font-size: 10px;
+  }
+
+  #enchant-table {
+    font-size: 11px;
+  }
+
+  .merge-header {
+    font-size: 11px;
+  }
+
+  .merge-type img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .level-display {
+    padding: 3px;
+  }
+
+  header h1 {
+    padding: 5px;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+  }
+
+  #item-buttons:empty::after {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  #toast-container {
+    bottom: 12px;
+    gap: 6px;
+    max-width: 95%;
+  }
+
+  .toast {
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 5px;
   }
 }
 
@@ -611,12 +817,14 @@ footer {
 }
 
 #item-buttons:empty::after {
-  content: '카테고리를 선택해주세요';
-  width: 100%;
+  content: "카테고리를 선택해주세요";
+  display: block;
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
-  padding: 2rem 0;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+  width: 100%;
+  grid-column: 1 / -1;
 }
 
 #category-selector {
@@ -698,5 +906,93 @@ footer {
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.enchant-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.enchant-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.enchant-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 300px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.enchant-modal.show .enchant-modal-content {
+  transform: scale(1);
+}
+
+.enchant-modal-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.enchant-modal-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .enchant-modal-content {
+    padding: 16px;
+    width: 280px;
+  }
+
+  .enchant-modal-title {
+    font-size: 15px;
+  }
+
+  .enchant-modal-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .enchant-modal-content {
+    padding: 14px;
+    width: 260px;
+  }
+
+  .enchant-modal-title {
+    font-size: 14px;
+  }
+
+  .enchant-modal-description {
+    font-size: 12px;
   }
 }

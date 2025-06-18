@@ -810,21 +810,48 @@ class MergeLevelsTooExpensiveError extends Error {
 }
 
 function showToast(message, duration = 3000) {
+  console.log('showToast called with message:', message);
+
+  // 기존 토스트 제거
+  const existingContainer = document.getElementById("toast-container");
+  if (existingContainer) {
+    const existingToasts = existingContainer.querySelectorAll('.toast');
+    existingToasts.forEach(toast => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    });
+  }
+
   const toast = document.createElement("div");
   toast.className = "toast";
   toast.textContent = message;
   
-  const container = document.getElementById("toast-container");
-  container.appendChild(toast);
+  let container = document.getElementById("toast-container");
+  console.log('Toast container found:', !!container);
   
-  setTimeout(() => {
+  if (!container) {
+    console.log('Creating new toast container');
+    container = document.createElement("div");
+    container.id = "toast-container";
+    document.body.appendChild(container);
+  }
+  
+  container.appendChild(toast);
+  console.log('Toast element created and added to container');
+  
+  // Force reflow
+  toast.offsetHeight;
+  
+  requestAnimationFrame(() => {
     toast.classList.add("show");
-  }, 10);
+    console.log('Toast show class added');
+  });
   
   setTimeout(() => {
     toast.classList.remove("show");
     setTimeout(() => {
-      container.removeChild(toast);
+      toast.remove();
+      console.log('Toast removed');
     }, 300);
   }, duration);
 }
