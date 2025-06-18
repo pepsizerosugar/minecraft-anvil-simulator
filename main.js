@@ -186,7 +186,6 @@ function renderEnchantTable() {
   table.style.display = "table";
   results.style.display = "block";
 
-  // 현재 선택된 인챈트들의 ID 목록
   const selectedEnchantIds = Object.keys(selectedMap);
   
   enchantments
@@ -197,7 +196,6 @@ function renderEnchantTable() {
     .forEach((e) => {
       const tr = document.createElement("tr");
       
-      // 현재 인챈트가 선택된 다른 인챈트들과 호환되는지 확인
       const isIncompatible = selectedEnchantIds.some(selectedId => {
         const selectedEnchant = enchantments.find(x => x.id === selectedId);
         return !isCompatible(selectedEnchant, e);
@@ -220,12 +218,10 @@ function renderEnchantTable() {
         btn.setAttribute("data-level", lvl);
         btn.textContent = toRoman(lvl);
         
-        // 현재 선택된 레벨인 경우
         if (selectedMap[e.id] === lvl) {
           btn.classList.add("selected");
         }
         
-        // 호환되지 않는 인챈트의 버튼은 비활성화
         if (isIncompatible && !selectedMap[e.id]) {
           btn.disabled = true;
         }
@@ -471,7 +467,6 @@ async function renderResult() {
   seqEl.innerHTML = "";
   seqEl.append(flow);
   
-  // 터치 이벤트 핸들러 추가
   addTouchHandlers();
 }
 
@@ -844,7 +839,6 @@ class MergeLevelsTooExpensiveError extends Error {
 function showToast(message, duration = 3000) {
   console.log('showToast called with message:', message);
 
-  // 기존 토스트 제거
   const existingContainer = document.getElementById("toast-container");
   if (existingContainer) {
     const existingToasts = existingContainer.querySelectorAll('.toast');
@@ -871,7 +865,6 @@ function showToast(message, duration = 3000) {
   container.appendChild(toast);
   console.log('Toast element created and added to container');
   
-  // Force reflow
   toast.offsetHeight;
   
   requestAnimationFrame(() => {
@@ -894,32 +887,25 @@ function adjustTooltipPosition(tooltip, info) {
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
 
-  // 기본 위치 초기화
   tooltip.classList.remove('top', 'bottom', 'left', 'right');
 
-  // 기본적으로 위쪽에 표시
   let position = 'top';
 
-  // 위쪽에 공간이 부족한 경우
   if (rect.top < tooltipRect.height) {
     position = 'bottom';
   }
 
-  // 오른쪽에 공간이 부족한 경우
   if (rect.right + tooltipRect.width / 2 > viewportWidth) {
     position = 'left';
   }
 
-  // 왼쪽에 공간이 부족한 경우
   if (rect.left < tooltipRect.width / 2) {
     position = 'right';
   }
 
-  // 위치 클래스 적용
   tooltip.classList.add(position);
 }
 
-// 터치 이벤트 핸들러 추가
 function addTouchHandlers() {
   document.querySelectorAll('.enchant-info').forEach(info => {
     let touchTimeout;
@@ -943,7 +929,6 @@ function addTouchHandlers() {
       }
     }, { passive: false });
     
-    // 다른 곳을 터치했을 때 툴큅 닫기
     document.addEventListener('touchstart', (e) => {
       if (!info.contains(e.target)) {
         const tooltip = info.querySelector('.enchant-tooltip');
