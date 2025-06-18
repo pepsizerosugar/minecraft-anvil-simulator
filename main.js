@@ -888,6 +888,37 @@ function showToast(message, duration = 3000) {
   }, duration);
 }
 
+function adjustTooltipPosition(tooltip, info) {
+  const rect = info.getBoundingClientRect();
+  const tooltipRect = tooltip.getBoundingClientRect();
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  // 기본 위치 초기화
+  tooltip.classList.remove('top', 'bottom', 'left', 'right');
+
+  // 기본적으로 위쪽에 표시
+  let position = 'top';
+
+  // 위쪽에 공간이 부족한 경우
+  if (rect.top < tooltipRect.height) {
+    position = 'bottom';
+  }
+
+  // 오른쪽에 공간이 부족한 경우
+  if (rect.right + tooltipRect.width / 2 > viewportWidth) {
+    position = 'left';
+  }
+
+  // 왼쪽에 공간이 부족한 경우
+  if (rect.left < tooltipRect.width / 2) {
+    position = 'right';
+  }
+
+  // 위치 클래스 적용
+  tooltip.classList.add(position);
+}
+
 // 터치 이벤트 핸들러 추가
 function addTouchHandlers() {
   document.querySelectorAll('.enchant-info').forEach(info => {
@@ -897,6 +928,7 @@ function addTouchHandlers() {
       e.preventDefault();
       const tooltip = info.querySelector('.enchant-tooltip');
       if (tooltip) {
+        adjustTooltipPosition(tooltip, info);
         tooltip.style.opacity = '1';
         tooltip.style.visibility = 'visible';
       }
@@ -911,7 +943,7 @@ function addTouchHandlers() {
       }
     }, { passive: false });
     
-    // 다른 곳을 터치했을 때 툴팁 닫기
+    // 다른 곳을 터치했을 때 툴큅 닫기
     document.addEventListener('touchstart', (e) => {
       if (!info.contains(e.target)) {
         const tooltip = info.querySelector('.enchant-tooltip');
