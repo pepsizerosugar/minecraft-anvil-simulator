@@ -185,6 +185,10 @@ function renderEnchantTable() {
   
   table.style.display = "table";
   results.style.display = "block";
+
+  // 현재 선택된 인챈트들의 ID 목록
+  const selectedEnchantIds = Object.keys(selectedMap);
+  
   enchantments
     .filter((e) => {
       const s = e.applicable_slots || [];
@@ -192,24 +196,48 @@ function renderEnchantTable() {
     })
     .forEach((e) => {
       const tr = document.createElement("tr");
+      
+      // 현재 인챈트가 선택된 다른 인챈트들과 호환되는지 확인
+      const isIncompatible = selectedEnchantIds.some(selectedId => {
+        const selectedEnchant = enchantments.find(x => x.id === selectedId);
+        return !isCompatible(selectedEnchant, e);
+      });
+      
+      if (isIncompatible) {
+        tr.classList.add("incompatible");
+      }
+      
       tr.innerHTML = `
         <td>${e.name?.[LANG] || e.id}</td>
         <td class="desc-cell">${e.description?.[LANG] || ""}</td>
         <td><div class="level-buttons"></div></td>
       `;
+      
       const cell = tr.querySelector(".level-buttons");
       for (let lvl = 1; lvl <= e.max_level; lvl++) {
         const btn = document.createElement("button");
         btn.className = "level-button";
         btn.setAttribute("data-level", lvl);
         btn.textContent = toRoman(lvl);
-        if (selectedMap[e.id] === lvl) btn.classList.add("selected");
+        
+        // 현재 선택된 레벨인 경우
+        if (selectedMap[e.id] === lvl) {
+          btn.classList.add("selected");
+        }
+        
+        // 호환되지 않는 인챈트의 버튼은 비활성화
+        if (isIncompatible && !selectedMap[e.id]) {
+          btn.disabled = true;
+        }
+        
         btn.onclick = () => {
           const others = Object.keys(selectedMap).map((id) =>
             enchantments.find((x) => x.id === id)
           );
-          if (selectedMap[e.id] === lvl) delete selectedMap[e.id];
-          else {
+          
+          if (selectedMap[e.id] === lvl) {
+            delete selectedMap[e.id];
+          } else {
             for (const o of others) {
               if (!isCompatible(o, e)) {
                 showToast(`${o.name[LANG]}과(와) ${e.name[LANG]}는 호환되지 않습니다`);
@@ -221,6 +249,7 @@ function renderEnchantTable() {
           renderEnchantTable();
           renderResult();
         };
+        
         cell.append(btn);
       }
       tb.append(tr);
@@ -441,6 +470,9 @@ async function renderResult() {
 
   seqEl.innerHTML = "";
   seqEl.append(flow);
+  
+  // 터치 이벤트 핸들러 추가
+  addTouchHandlers();
 }
 
 function toRoman(n) {
@@ -854,4 +886,40 @@ function showToast(message, duration = 3000) {
       console.log('Toast removed');
     }, 300);
   }, duration);
+}
+
+// 터치 이벤트 핸들러 추가
+function addTouchHandlers() {
+  document.querySelectorAll('.enchant-info').forEach(info => {
+    let touchTimeout;
+    
+    info.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      const tooltip = info.querySelector('.enchant-tooltip');
+      if (tooltip) {
+        tooltip.style.opacity = '1';
+        tooltip.style.visibility = 'visible';
+      }
+    }, { passive: false });
+    
+    info.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      const tooltip = info.querySelector('.enchant-tooltip');
+      if (tooltip) {
+        tooltip.style.opacity = '0';
+        tooltip.style.visibility = 'hidden';
+      }
+    }, { passive: false });
+    
+    // 다른 곳을 터치했을 때 툴팁 닫기
+    document.addEventListener('touchstart', (e) => {
+      if (!info.contains(e.target)) {
+        const tooltip = info.querySelector('.enchant-tooltip');
+        if (tooltip) {
+          tooltip.style.opacity = '0';
+          tooltip.style.visibility = 'hidden';
+        }
+      }
+    });
+  });
 }

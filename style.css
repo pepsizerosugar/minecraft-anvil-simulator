@@ -173,8 +173,33 @@ section h2::after {
   touch-action: manipulation;
 }
 
-.level-button:active {
+.level-button:active:not(:disabled) {
   background-color: #f0f0f0;
+}
+
+.level-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f5f5f5;
+  border-color: #ddd;
+  color: #999;
+  pointer-events: none;
+}
+
+.level-button:disabled:hover {
+  background: #f5f5f5;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 호환되지 않는 인챈트 행 스타일 */
+#enchant-table tr.incompatible {
+  opacity: 0.5;
+  background: rgba(255, 0, 0, 0.05);
+}
+
+#enchant-table tr.incompatible td {
+  color: #999;
 }
 
 /* 레벨 1: 초록색 */
@@ -356,14 +381,25 @@ section h2::after {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
-  margin-bottom: 10px;
-  white-space: nowrap;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  /* iOS에서 터치 이벤트가 작동하도록 수정 */
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .enchant-info:hover .enchant-tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+/* 터치 디바이스에서 툴팁이 닫히도록 하는 스타일 */
+@media (hover: none) {
+  .enchant-info:active .enchant-tooltip {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .tooltip-header {
