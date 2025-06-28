@@ -408,9 +408,6 @@
     "enchanting_table_max_level": 1,
     "book_multiplier": 2,
     "item_multiplier": 4,
-    "exclusive_with": [
-      "infinity"
-    ],
     "weight": 2
   },
   {
