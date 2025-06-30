@@ -543,7 +543,7 @@
     "book_multiplier": 4,
     "item_multiplier": 8,
     "exclusive_with": [
-      "mending",
+      "mending"
     ],
     "weight": 4
   },
