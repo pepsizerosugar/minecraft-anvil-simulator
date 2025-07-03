@@ -4,7 +4,7 @@
   <img src="resources/images/Enchanted_Diamond_Sword.webp" alt="마인크래프트 인챈트 시뮬레이터" width="200"/>
   
   [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/pepsizerosugar/minecraft-enchant-simulator)
-  [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.5-green.svg)](https://www.minecraft.net)
+  [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.6-green.svg)](https://www.minecraft.net)
   [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 </div>
 
